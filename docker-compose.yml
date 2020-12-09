@@ -1,0 +1,26 @@
+version: '3.6'
+services:
+  psql:
+    image: postgis/postgis
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=postgis
+      - &psql-user POSTGRES_USER=postgres
+      - &psql-pass POSTGRES_PASSWORD=postgres
+    volumes:
+      - /data/urban-sdk/postgresql:/var/lib/postgresql
+
+  flask:
+    build:
+      context: .
+    image: urban-sdk-flask
+    volumes:
+      - ./:/app
+    ports:
+      - 5000:5000
+    links:
+      - psql
+    environment:
+      - *psql-user
+      - *psql-pass
