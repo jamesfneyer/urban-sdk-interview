@@ -5,7 +5,7 @@ LABEL maintainer James Neyer "james@neyer.net"
 ENV LANG C.UTF-8
 ENV PYTHONUNBUFFERED 1
 
-RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
+RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev && apk add geos-dev
 
 RUN mkdir /app
 WORKDIR /app

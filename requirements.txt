@@ -1,4 +1,8 @@
 flask ~= 1.1.2
+Flask-REST-JSONAPI ~= 0.31.2
 flask-migrate ~= 2.5.3
 flask-sqlalchemy ~= 2.4.4
 geoalchemy2 ~= 0.8.4
+marshmallow-sqlalchemy ~= 0.24.1
+psycopg2 ~= 2.8.6
+shapely ~= 1.7.1

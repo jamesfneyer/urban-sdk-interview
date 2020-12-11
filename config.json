@@ -1,0 +1,5 @@
+{
+  "ENV": "development",
+  "SQLALCHEMY_TRACK_MODIFICATIONS": false,
+  "DEBUG": true
+}
